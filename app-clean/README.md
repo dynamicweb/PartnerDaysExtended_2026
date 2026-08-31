@@ -15,6 +15,14 @@ so there is nowhere to build or develop add-ins — you work through the
 administration and the Swift templates. If you need to write code, take a
 [solution package](../solution-clean/) instead.
 
+That cuts the other way too, though. If the thing you're building lives
+**outside** Dynamicweb — your own application, in whatever stack — this package
+gives you a real Dynamicweb instance to pull data from without standing up a
+development solution. The bundled MCP server exposes tools over products
+(including index queries and assets), content, documentation and migration, so
+an agent can query this site while your actual project lives somewhere else
+entirely.
+
 > [!IMPORTANT]
 > **Extract to a local path on the C: drive** — for example
 > `C:\Projects\PartnerDaysExtended`.

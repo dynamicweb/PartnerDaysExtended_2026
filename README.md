@@ -34,7 +34,8 @@ Server, imports the database and wires up the connection for you.
 - **You just want a running site to click around in** → *app*. Already
   published and hosted in IIS. Note there is no code project in it, so you
   cannot build or develop add-ins from this package — take a *solution* if you
-  need that.
+  need that. It does work well as a data source for something you're building
+  elsewhere: the MCP server is installed and running.
 - **You want to see the agent do the work** → *skills-only*. A 34 KB download;
   the agent builds and fetches the rest. The best demo, and the slowest route
   to a running site.
