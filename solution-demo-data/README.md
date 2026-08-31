@@ -110,6 +110,18 @@ in place. If images are missing, you're on the clean package by mistake.
 The first time you open the site, Dynamicweb asks you to set up a license.
 Select **Trial**.
 
+## 7. Sign in
+
+Go to `/Admin` and sign in with:
+
+| | |
+|---|---|
+| Username | `Administrator` |
+| Password | `Administrator1` |
+
+These are the workshop defaults and are the same in every package. Change them
+before putting the site anywhere reachable from outside your machine.
+
 ## Troubleshooting
 
 **`dotnet build` fails immediately.** Check `dotnet --list-sdks` shows a 10.x
