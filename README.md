@@ -1,61 +1,83 @@
 # Partner Days Extended 2026
 
-Workshop packages for building on **Dynamicweb 10** with an AI coding agent
-(Claude Code, GitHub Copilot or OpenAI Codex).
+Five ready-made packages for getting a **Dynamicweb 10** site up and running,
+each with an AI coding agent (Claude Code, GitHub Copilot or OpenAI Codex)
+already set up to help.
 
-There are five packages. They all get you to the same place — a running
-Dynamicweb 10 solution with the Swift design and a local database — but they
-differ in how much is prepared for you up front, and the setup is genuinely
-different for each.
+They all end at the same place: a working Dynamicweb site with the Swift design
+and a local database. What differs is how much is prepared for you, and how
+much you can change afterwards.
 
-**Pick one folder below and follow the guide inside it.** You don't need more
-than one package, and you don't need anything from the other folders.
+**Pick one, open its folder, and follow the guide inside.** You don't need more
+than one.
 
-## Packages
+## Which package should I use?
 
-| Folder | Package | What you get |
+| I want to… | Take | You'll need |
 |---|---|---|
-| **[solution-clean](solution-clean/)** | 19 MB | .NET solution with host + files project, code, database backup and the base Swift files. No typography or colours. |
-| **[solution-demo-data](solution-demo-data/)** | 453 MB | Same as above, plus demo data: product images, typography and colours. |
-| **[app-clean](app-clean/)** | 88 MB | Published Dynamicweb 10 (10.29.1) application, database backup and the base Swift files. No typography or colours. |
-| **[app-demo-data](app-demo-data/)** | 522 MB | Same as above, plus demo data: product images, typography and colours. |
-| **[skills-only](skills-only/)** | 34 KB | Just the agent skills. They build the solution for you and download every asset from the Dynamicweb doc site themselves. |
+| See a finished Dynamicweb shop running and click around in it | **[app-demo-data](app-demo-data/)** | IIS |
+| The same, but with a plain design I'll style myself | **[app-clean](app-clean/)** | IIS |
+| Write code and build add-ins, starting from a finished-looking shop | **[solution-demo-data](solution-demo-data/)** | .NET 10 SDK |
+| Write code, starting from a plain design | **[solution-clean](solution-clean/)** | .NET 10 SDK |
+| Watch an AI agent build the whole thing from nothing | **[skills-only](skills-only/)** | .NET 10 SDK, internet |
 
-Each folder holds the package zip and a setup guide written for that package
+Everyone also needs a SQL Server — a local instance, a Docker container or a
+remote server. LocalDB will not work.
+
+## Understanding the choice
+
+There are only two decisions, and the table above has already made them for
+you. This section is here if you want to know why.
+
+### App or solution?
+
+**App packages** are a finished Dynamicweb site, already built. You host the
+folder in IIS and it runs — there is nothing to compile. You can change the
+site through the Dynamicweb administration and its templates, but there is no
+code project in the box, so you cannot write or build add-ins.
+
+That is not only a limitation: an app package gives you a real, running
+Dynamicweb instance with the MCP server installed. If the thing you're building
+lives *outside* Dynamicweb, this is a quick way to get a system an agent can
+pull data from.
+
+**Solution packages** are the same site as a development project. You open it
+in Visual Studio or Rider, or run it from the command line, and you can change
+the code. This is the only kind of package where add-ins are possible.
+
+**Skills-only** is neither. It contains three agent skills and nothing else —
+34 KB. The agent creates the solution and downloads every asset itself while
+you watch. It is the most interesting one to demonstrate and the slowest way to
+reach a running site, and it needs internet access throughout.
+
+### Plain design or demo data?
+
+"Demo data" means the product images, the typography and the colour scheme that
+make the Swift demo shop look finished.
+
+- **demo-data** — the shop looks complete straight away. Best if you want to
+  show it to someone, or start from something that already looks right.
+- **clean** — the same shop with the demo styling stripped out. Best if you
+  intend to apply your own design.
+
+The database is identical either way. Only the files differ, so a clean package
+still has the full product catalogue behind it — just without the images and
+styling on top.
+
+## What's in each package
+
+| Folder | Download | Contents |
+|---|---|---|
+| [solution-clean](solution-clean/) | 19 MB | `.slnx` solution, host + files project, database backup, base Swift files |
+| [solution-demo-data](solution-demo-data/) | 453 MB | As above, plus product images, typography and colours |
+| [app-clean](app-clean/) | 88 MB | Published Dynamicweb 10.29.1 application, database backup, base Swift files |
+| [app-demo-data](app-demo-data/) | 522 MB | As above, plus product images, typography and colours |
+| [skills-only](skills-only/) | 34 KB | Three agent skills; everything else is downloaded on demand |
+
+Each folder holds the package itself and a setup guide written for that package
 alone. Every package except skills-only also ships with the latest Dynamicweb
 MCP server installed, and with an `install-database` skill that finds your SQL
-Server, imports the database and wires up the connection for you.
-
-## Which one should I pick?
-
-- **You want to write code** → *solution*. An ordinary .NET solution: open the
-  `.slnx` in Visual Studio or Rider, or run it from the CLI with `dotnet run`.
-  The only packages where you can build add-ins. Needs the .NET 10 SDK.
-- **You just want a running site to click around in** → *app*. Already
-  published and hosted in IIS. Note there is no code project in it, so you
-  cannot build or develop add-ins from this package — take a *solution* if you
-  need that. It does work well as a data source for something you're building
-  elsewhere: the MCP server is installed and running.
-- **You want to see the agent do the work** → *skills-only*. A 34 KB download;
-  the agent builds and fetches the rest. The best demo, and the slowest route
-  to a running site.
-- **Clean or demo data?** Demo data means product images, typography and
-  colours. Take *clean* if you intend to put your own design on top, and
-  *demo-data* if you want the Swift demo shop to look finished out of the box.
-  The database is the same in both.
-
-## What every package needs
-
-Whichever you pick, have these ready before you start:
-
-- **A SQL Server** — a local instance, a Docker container or a remote server.
-  LocalDB does **not** work. If you have Docker but no SQL Server, the setup
-  skill will offer to create a container for you.
-- **An agent** — Claude Code, GitHub Copilot or OpenAI Codex.
-- **.NET 10 SDK** for the solution and skills-only packages, or **IIS with the
-  .NET 10 Hosting Bundle** for the app packages.
-
-Your guide covers the rest.
+Server, imports the database and connects the site to it.
 
 ## Notes
 
