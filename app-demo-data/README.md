@@ -7,9 +7,10 @@ nothing to build — you host the folder as it comes. Includes the database
 backup, the base Swift files **and the demo data** — product images, typography
 and colours. The Swift demo shop looks finished out of the box.
 
-This is the fastest route to a running, good-looking site. If you'd rather
-start from a blank canvas, use the [clean](../app-clean/) package; the database
-is identical in both and only the assets differ.
+Use this package for the same reasons you'd use the [clean](../app-clean/) one
+— the only difference is the demo data. Take this one if you want the shop to
+look finished, and the clean one if you intend to apply your own design. The
+database is identical in both; only the assets differ.
 
 **This package only gets you a running site.** There is no code project in it,
 so there is nowhere to build or develop add-ins — you work through the
@@ -114,8 +115,11 @@ The skill will:
    `web.config`. Not `wwwroot`, not `bin`.
 
 The defaults are fine for everything else — you shouldn't need to touch the
-port, the application pool or the folder permissions. If the site doesn't come
-up, see Troubleshooting.
+application pool or the folder permissions.
+
+**If you already have another package hosted in IIS**, give this site a
+different port (8081, say). Otherwise it binds port 80 alongside the existing
+site and neither behaves. If the site doesn't come up, see Troubleshooting.
 
 Browse to the site. You should see the Swift demo shop with product images,
 typography and colours in place. The Dynamicweb administration is at `/Admin`.
