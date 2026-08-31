@@ -14,7 +14,7 @@ missing. If you'd rather have a finished-looking shop, use the
 solution: open `PartnerDaysExtended.slnx` in Visual Studio or Rider and start
 it from there, or run it from the command line with `dotnet run`. Unlike the
 [app packages](../app-clean/) there's a real project here, so this is what you
-take if you want to write code or build add-ins.
+take if you want somewhere to write code.
 
 Note that `.slnx` is the newer XML solution format — a current Visual Studio
 opens it, older versions don't. Working from the CLI avoids the question

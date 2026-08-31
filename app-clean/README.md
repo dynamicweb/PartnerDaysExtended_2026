@@ -11,11 +11,16 @@ missing. If you'd rather have a finished-looking shop, use the
 [with demo data](../app-demo-data/) package instead.
 
 **This package only gets you a running site.** There is no code project in it,
-so there is nowhere to build or develop add-ins — you work through the
-administration and the Swift templates. If you need to write code, take a
-[solution package](../solution-clean/) instead.
+so there is nothing here to write code in — you work through the
+administration and the Swift templates. If you want a project to develop in,
+take a [solution package](../solution-clean/) instead.
 
-That cuts the other way too, though. If the thing you're building lives
+You can still **use** add-ins: install them from the AppStore, or build one in
+a separate project and install it into `wwwroot/Files/System/AddIns/Installed/`
+— that's where the bundled MCP add-in sits. What you can't do is develop them
+inside this package.
+
+There's a second use for this package, too. If the thing you're building lives
 **outside** Dynamicweb — your own application, in whatever stack — this package
 gives you a real Dynamicweb instance to pull data from without standing up a
 development solution. The bundled MCP server exposes tools over products
@@ -46,14 +51,13 @@ The latest Dynamicweb MCP server is already installed.
 
 ## 1. Install the prerequisites
 
-- **IIS**, with the **.NET 10 Hosting Bundle** from
-  <https://dotnet.microsoft.com/download/dotnet/10.0>. IIS cannot run the
-  application without the bundle — this is not optional, and it's the single
-  most common reason the site won't start. Install it, then:
-
-  ```bash
-  iisreset
-  ```
+- **A way to host it.** Either:
+  - **IIS**, with the **.NET 10 Hosting Bundle** from
+    <https://dotnet.microsoft.com/download/dotnet/10.0>. IIS cannot run the
+    application without the bundle — this is not optional, and it's the single
+    most common reason the site won't start. Install it, then run `iisreset`.
+  - or just the **.NET 10 runtime**, if you'd rather run it directly with
+    Kestrel (option B in step 4). Simpler, but nothing is preconfigured.
 
 - **A SQL Server** — a local instance, a Docker container or a remote server.
   LocalDB does **not** work; Dynamicweb needs a real instance. If you have
@@ -101,7 +105,12 @@ The skill will:
 5. Write the connection details into
    `wwwroot/Files/GlobalSettings.Database.config`.
 
-## 4. Create the IIS site
+## 4. Start the site
+
+Two ways. IIS is what the package is set up for; Kestrel is quicker if you'd
+rather not touch IIS at all.
+
+### Option A — IIS
 
 1. Open IIS Manager and add a new website.
 2. **Physical path:** the unpacked folder root — the one containing
@@ -113,6 +122,17 @@ application pool or the folder permissions.
 If you're hosting more than one package at the same time, give each site its
 own port so the bindings don't overlap. If the site doesn't come up, see
 Troubleshooting.
+
+### Option B — Kestrel
+
+Nothing is preconfigured for this, but the application runs on its own:
+
+```bash
+dotnet .in\Dynamicweb.Host.Suite.dll
+```
+
+It prints the URL it's listening on. This needs the .NET 10 runtime rather
+than the Hosting Bundle, and skips IIS entirely.
 
 Browse to the site. The Dynamicweb administration is at `/Admin`.
 
