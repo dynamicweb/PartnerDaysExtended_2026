@@ -1,15 +1,17 @@
 # Partner Days Extended 2026
 
-Five ready-made packages for getting a **Dynamicweb 10** site up and running,
-each with an AI coding agent (Claude Code, GitHub Copilot or OpenAI Codex)
-already set up to help.
+Five ready-made packages for getting a **Dynamicweb 10** site running, each
+with an AI coding agent (Claude Code, GitHub Copilot or OpenAI Codex) already
+set up to help.
 
-They all end at the same place: a working Dynamicweb site with the Swift design
-and a local database. What differs is how much is prepared for you, and how
-much you can change afterwards.
+Whichever you choose you end up in the same place: the Swift demo shop running
+on your own machine, with its own database and an administration you can sign
+in to. What differs is how much is prepared for you in advance, and how much
+you can change afterwards.
 
 **Pick one, open its folder, and follow the guide inside.** You don't need more
-than one.
+than one, and each guide covers the whole thing — database, hosting, license
+and sign-in.
 
 ## Which package should I use?
 
@@ -21,8 +23,18 @@ than one.
 | Write code, starting from a plain design | **[solution-clean](solution-clean/)** | .NET 10 SDK |
 | Watch an AI agent build the whole thing from nothing | **[skills-only](skills-only/)** | .NET 10 SDK, internet |
 
-Everyone also needs a SQL Server — a local instance, a Docker container or a
+Everyone also needs **SQL Server** — a local instance, a Docker container or a
 remote server. LocalDB will not work.
+
+## At a glance
+
+| Package | Somewhere to write code | How it runs | Design | Download |
+|---|---|---|---|---|
+| [app-clean](app-clean/) | No | IIS, or Kestrel | Plain | 88 MB |
+| [app-demo-data](app-demo-data/) | No | IIS, or Kestrel | Finished | 522 MB |
+| [solution-clean](solution-clean/) | Yes | Visual Studio, or `dotnet run` | Plain | 19 MB |
+| [solution-demo-data](solution-demo-data/) | Yes | Visual Studio, or `dotnet run` | Finished | 453 MB |
+| [skills-only](skills-only/) | Yes | Visual Studio, or `dotnet run` | Your choice | 34 KB |
 
 ## Understanding the choice
 
@@ -31,17 +43,20 @@ you. This section is here if you want to know why.
 
 ### App or solution?
 
-**App packages** are a finished Dynamicweb site, already built. You host the
-folder in IIS and it runs — there is nothing to compile. You can change the
-site through the Dynamicweb administration and its templates, but there is no
-code project in the box, so there is nowhere to write code. You can still use
-add-ins — installed from the AppStore, or built in a separate project — you
-just can't develop them here.
+**App packages** are a finished Dynamicweb site, already built. There is
+nothing to compile — you host the folder in IIS, or start it directly with the
+.NET runtime, and it runs. You change the site through the Dynamicweb
+administration and its templates, but there is no code project in the box, so
+there is nowhere to write code.
 
-That is not only a limitation: an app package gives you a real, running
-Dynamicweb instance with the MCP server installed. If the thing you're building
-lives *outside* Dynamicweb, this is a quick way to get a system an agent can
-pull data from.
+You can still use add-ins: install them from the AppStore, or build one in a
+separate project and install it into the site. What you can't do is develop
+them here.
+
+An app package is also useful in the opposite direction. It gives you a real,
+running Dynamicweb instance with the MCP server installed — so if the thing
+you're building lives *outside* Dynamicweb, this is a quick way to get a system
+an agent can pull data from.
 
 **Solution packages** are the same site as a development project. You open it
 in Visual Studio or Rider, or run it from the command line, and you can change
@@ -49,8 +64,9 @@ the code. This is the one to take if you want somewhere to write code.
 
 **Skills-only** is neither. It contains three agent skills and nothing else —
 34 KB. The agent creates the solution and downloads every asset itself while
-you watch. It is the most interesting one to demonstrate and the slowest way to
-reach a running site, and it needs internet access throughout.
+you watch. It ends up equivalent to a solution package, but it is the most
+interesting one to demonstrate and the slowest way to reach a running site, and
+it needs internet access throughout.
 
 ### Plain design or demo data?
 
@@ -66,20 +82,24 @@ The database is identical either way. Only the files differ, so a clean package
 still has the full product catalogue behind it — just without the images and
 styling on top.
 
-## What's in each package
+## What's in the packages
 
-| Folder | Download | Contents |
-|---|---|---|
-| [solution-clean](solution-clean/) | 19 MB | `.slnx` solution, host + files project, database backup, base Swift files |
-| [solution-demo-data](solution-demo-data/) | 453 MB | As above, plus product images, typography and colours |
-| [app-clean](app-clean/) | 88 MB | Published Dynamicweb 10.29.1 application, database backup, base Swift files |
-| [app-demo-data](app-demo-data/) | 522 MB | As above, plus product images, typography and colours |
-| [skills-only](skills-only/) | 34 KB | Three agent skills; everything else is downloaded on demand |
+Every package builds the same thing: **Dynamicweb 10.29.1** with the Swift
+design, and a database restored from a backup during setup.
 
-Each folder holds the package itself and a setup guide written for that package
-alone. Every package except skills-only also ships with the latest Dynamicweb
-MCP server installed, and with an `install-database` skill that finds your SQL
-Server, imports the database and connects the site to it.
+Each one also ships with an `install-database` skill for your agent, which
+finds your SQL Server, imports the database and connects the site to it — so
+the fiddliest part of the setup is handled for you. Every package except
+skills-only additionally has the latest Dynamicweb MCP server installed.
+
+What differs is the shape of what you unpack:
+
+- **Solution packages** — a `.slnx` solution with a host project and a files
+  project, plus the database backup.
+- **App packages** — a published application: `bin`, `wwwroot`, `web.config`,
+  plus the database backup.
+- **Skills-only** — three agent skills. Everything else is downloaded from the
+  Dynamicweb doc site as the agent works.
 
 ## Notes
 
