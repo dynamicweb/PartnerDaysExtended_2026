@@ -30,10 +30,10 @@ remote server. LocalDB will not work.
 
 | Package | Somewhere to write code | How it runs | Design | Download |
 |---|---|---|---|---|
-| [app-clean](app-clean/) | No | IIS, or Kestrel | Plain | 88 MB |
-| [app-demo-data](app-demo-data/) | No | IIS, or Kestrel | Finished | 522 MB |
-| [solution-clean](solution-clean/) | Yes | Visual Studio, or `dotnet run` | Plain | 19 MB |
-| [solution-demo-data](solution-demo-data/) | Yes | Visual Studio, or `dotnet run` | Finished | 453 MB |
+| [app-clean](app-clean/) | No | IIS, or Kestrel | Plain | 93 MB |
+| [app-demo-data](app-demo-data/) | No | IIS, or Kestrel | Finished | 548 MB |
+| [solution-clean](solution-clean/) | Yes | Visual Studio, or `dotnet run` | Plain | 20 MB |
+| [solution-demo-data](solution-demo-data/) | Yes | Visual Studio, or `dotnet run` | Finished | 475 MB |
 | [skills-only](skills-only/) | Yes | Visual Studio, or `dotnet run` | Your choice | 34 KB |
 
 ## Understanding the choice

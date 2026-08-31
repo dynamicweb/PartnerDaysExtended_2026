@@ -1,6 +1,6 @@
 # App — with demo data
 
-**Package:** `PartnerDaysExtended_app_skill_bacpac_assets.zip` (522 MB)
+**Package:** `PartnerDaysExtended_app_skill_bacpac_assets.zip` (548 MB)
 
 A **published** Dynamicweb 10.29.1 application. There is no solution and
 nothing to build — you host the folder as it comes. Includes the database
@@ -75,7 +75,7 @@ Extract to `C:\Projects\PartnerDaysExtended` or `C:\inetpub\PartnerDaysExtended`
 **Not** OneDrive, Dropbox or any synced folder — see the warning at the top of
 this page.
 
-The 522 MB download unpacks to about 0.9 GB across 3,099 files, so give it a
+The 548 MB download unpacks to about 0.9 GB across 3,099 files, so give it a
 moment.
 
 Note where the folder root is — the level containing `web.config`. IIS needs

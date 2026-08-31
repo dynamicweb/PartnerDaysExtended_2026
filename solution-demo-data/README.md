@@ -1,6 +1,6 @@
 # Solution — with demo data
 
-**Package:** `PartnerDaysExtended_project_skill_bacpac_assets.zip` (453 MB)
+**Package:** `PartnerDaysExtended_project_skill_bacpac_assets.zip` (475 MB)
 
 A Dynamicweb 10 solution you can open in an IDE, build and run. Includes the
 code, the database backup, the base Swift files **and the demo data** — product
@@ -62,7 +62,7 @@ Extract to `C:\Projects\PartnerDaysExtended`, or anywhere else local and
 short. **Not** OneDrive, Dropbox or any synced folder — see the warning at the
 top of this page.
 
-The 453 MB download unpacks to about 0.5 GB across 2,584 files, so give it a
+The 475 MB download unpacks to about 0.5 GB across 2,584 files, so give it a
 moment.
 
 ## 3. Build

@@ -1,6 +1,6 @@
 # App — clean
 
-**Package:** `PartnerDaysExtended_app_skill_bacpac.zip` (88 MB)
+**Package:** `PartnerDaysExtended_app_skill_bacpac.zip` (93 MB)
 
 A **published** Dynamicweb 10.29.1 application. There is no solution and
 nothing to build — you host the folder as it comes. Includes the database

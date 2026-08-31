@@ -1,6 +1,6 @@
 # Solution — clean
 
-**Package:** `PartnerDaysExtended_project_skill_bacpac.zip` (19 MB)
+**Package:** `PartnerDaysExtended_project_skill_bacpac.zip` (20 MB)
 
 A Dynamicweb 10 solution you can open in an IDE, build and run. Includes the
 code, the database backup and the base Swift files — but **no demo typography
