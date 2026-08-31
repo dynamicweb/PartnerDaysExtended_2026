@@ -105,6 +105,11 @@ you launch the `https` profile. The Dynamicweb administration is at `/Admin`.
 You should see the Swift demo shop with product images, typography and colours
 in place. If images are missing, you're on the clean package by mistake.
 
+## 6. Set up the license
+
+The first time you open the site, Dynamicweb asks you to set up a license.
+Select **Trial**.
+
 ## Troubleshooting
 
 **`dotnet build` fails immediately.** Check `dotnet --list-sdks` shows a 10.x

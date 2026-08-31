@@ -95,6 +95,11 @@ dotnet run --project PartnerDaysExtended.Host
 The site comes up on <http://localhost:5041>, or <https://localhost:7046> if
 you launch the `https` profile. The Dynamicweb administration is at `/Admin`.
 
+## 6. Set up the license
+
+The first time you open the site, Dynamicweb asks you to set up a license.
+Select **Trial**.
+
 ## Troubleshooting
 
 **`dotnet build` fails immediately.** Check `dotnet --list-sdks` shows a 10.x

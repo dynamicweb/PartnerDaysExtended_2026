@@ -111,6 +111,11 @@ The skill will:
 Browse to the site. You should see the Swift demo shop with product images,
 typography and colours in place. The Dynamicweb administration is at `/Admin`.
 
+## 5. Set up the license
+
+The first time you open the site, Dynamicweb asks you to set up a license.
+Select **Trial**.
+
 ## Troubleshooting
 
 **HTTP 500.31 or 500.30 on first load.** Nearly always one of two things: the

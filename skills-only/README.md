@@ -115,6 +115,11 @@ will tell you, or check
 `PartnerDaysExtended.Host/Properties/launchSettings.json`. The Dynamicweb
 administration is at `/Admin`.
 
+## 6. Set up the license
+
+The first time you open the site, Dynamicweb asks you to set up a license.
+Select **Trial**.
+
 ## Troubleshooting
 
 **The agent doesn't know the scaffold skills.** Your working directory is
