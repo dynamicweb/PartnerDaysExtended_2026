@@ -32,7 +32,9 @@ Server, imports the database and wires up the connection for you.
   Studio or Rider and a host project referencing `Dynamicweb.Suite`. Needs the
   .NET 10 SDK.
 - **You just want a running site to click around in** → *app*. Already
-  published, so there's nothing to build — but it has to be hosted in IIS.
+  published and hosted in IIS. Note there is no code project in it, so you
+  cannot build or develop add-ins from this package — take a *solution* if you
+  need that.
 - **You want to see the agent do the work** → *skills-only*. A 34 KB download;
   the agent builds and fetches the rest. The best demo, and the slowest route
   to a running site.

@@ -9,8 +9,12 @@ and colours. The Swift demo shop looks finished out of the box.
 
 This is the fastest route to a running, good-looking site. If you'd rather
 start from a blank canvas, use the [clean](../app-clean/) package; the database
-is identical in both and only the assets differ. If you want to write code,
-take a [solution package](../solution-demo-data/).
+is identical in both and only the assets differ.
+
+**This package only gets you a running site.** There is no code project in it,
+so there is nowhere to build or develop add-ins — you work through the
+administration and the Swift templates. If you need to write code, take a
+[solution package](../solution-demo-data/) instead.
 
 > [!IMPORTANT]
 > **Extract to a local path on the C: drive** — for example

@@ -8,8 +8,12 @@ backup and the base Swift files, but **no demo typography or colours**.
 
 The database is the demo catalogue either way, so expect product images to be
 missing. If you'd rather have a finished-looking shop, use the
-[with demo data](../app-demo-data/) package instead. If you want to write code,
-take a [solution package](../solution-clean/).
+[with demo data](../app-demo-data/) package instead.
+
+**This package only gets you a running site.** There is no code project in it,
+so there is nowhere to build or develop add-ins — you work through the
+administration and the Swift templates. If you need to write code, take a
+[solution package](../solution-clean/) instead.
 
 > [!IMPORTANT]
 > **Extract to a local path on the C: drive** — for example
