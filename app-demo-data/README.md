@@ -117,9 +117,9 @@ The skill will:
 The defaults are fine for everything else — you shouldn't need to touch the
 application pool or the folder permissions.
 
-**If you already have another package hosted in IIS**, give this site a
-different port (8081, say). Otherwise it binds port 80 alongside the existing
-site and neither behaves. If the site doesn't come up, see Troubleshooting.
+If you're hosting more than one package at the same time, give each site its
+own port so the bindings don't overlap. If the site doesn't come up, see
+Troubleshooting.
 
 Browse to the site. You should see the Swift demo shop with product images,
 typography and colours in place. The Dynamicweb administration is at `/Admin`.
