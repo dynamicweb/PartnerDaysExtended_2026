@@ -1,5 +1,2 @@
-# Package zips are distributed as release assets, not committed
-*.zip
-
-# Build scratch
+# Build scratch from the original delivery zip
 tmp/

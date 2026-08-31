@@ -56,7 +56,10 @@ Your guide covers the rest.
 
 ## Notes
 
-- The package zips are distributed as release assets and are not committed to
-  this repository — the folders here hold the guides.
+- The package zips are stored with **Git LFS**. If you clone this repository,
+  install [Git LFS](https://git-lfs.com) first — without it you get small
+  pointer files instead of the actual zips. If you only want one package,
+  download its zip from the folder here on GitHub rather than cloning; the
+  repository is over a gigabyte in total.
 - `GlobalSettings.Database.config` holds your local SQL credentials in plain
   text. It's a workshop file — don't commit it.
