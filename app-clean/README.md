@@ -106,13 +106,10 @@ The skill will:
 1. Open IIS Manager and add a new website.
 2. **Physical path:** the unpacked folder root — the one containing
    `web.config`. Not `wwwroot`, not `bin`.
-3. **Port:** pick a free one, e.g. 8080.
-4. **Application pool:** set the .NET CLR version to **No Managed Code**.
-   ASP.NET Core runs out of process from the .NET Framework CLR, and leaving
-   this on the default will fail to start.
-5. **Permissions:** give the app pool identity read and write access to the
-   folder. Dynamicweb writes into `wwwroot/Files` at runtime, so read-only
-   isn't enough.
+
+The defaults are fine for everything else — you shouldn't need to touch the
+port, the application pool or the folder permissions. If the site doesn't come
+up, see Troubleshooting.
 
 Browse to the site. The Dynamicweb administration is at `/Admin`.
 
@@ -140,12 +137,17 @@ Hosting Bundle isn't installed (step 1 — and remember `iisreset` afterwards),
 or the database was never set up (step 3). Check the Windows Event Viewer under
 *Windows Logs → Application* for the actual startup error.
 
+If it still won't start, set the application pool's .NET CLR version to **No
+Managed Code**. It isn't normally required, but it rules out the pool trying to
+load the .NET Framework CLR alongside ASP.NET Core.
+
 **HTTP 500.19.** IIS can't read `web.config` — usually the app pool identity
 lacks read access to the folder, or the Hosting Bundle isn't installed so
 `AspNetCoreModuleV2` isn't registered.
 
 **The site loads but the administration won't save anything.** The app pool
-identity can't write to `wwwroot/Files`. Fix the folder permissions in step 4.5.
+identity can't write to `wwwroot/Files`. Grant it write access to the unpacked
+folder — the identity is `IIS AppPool\<your app pool name>`.
 
 **The agent doesn't know the `install-database` skill.** Your working directory
 is wrong. It has to be the folder containing `.claude/` — not a parent folder,
