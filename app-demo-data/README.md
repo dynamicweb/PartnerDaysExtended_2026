@@ -135,7 +135,7 @@ Troubleshooting.
 Nothing is preconfigured for this, but the application runs on its own:
 
 ```bash
-dotnet .in\Dynamicweb.Host.Suite.dll
+dotnet bin/Dynamicweb.Host.Suite.dll
 ```
 
 It prints the URL it's listening on. This needs the .NET 10 runtime rather

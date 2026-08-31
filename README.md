@@ -15,9 +15,9 @@ than one.
 
 | I want to… | Take | You'll need |
 |---|---|---|
-| See a finished Dynamicweb shop running and click around in it | **[app-demo-data](app-demo-data/)** | IIS |
-| The same, but with a plain design I'll style myself | **[app-clean](app-clean/)** | IIS |
-| Write code and build add-ins, starting from a finished-looking shop | **[solution-demo-data](solution-demo-data/)** | .NET 10 SDK |
+| See a finished Dynamicweb shop running and click around in it | **[app-demo-data](app-demo-data/)** | IIS, or .NET 10 runtime |
+| The same, but with a plain design I'll style myself | **[app-clean](app-clean/)** | IIS, or .NET 10 runtime |
+| Write code, starting from a finished-looking shop | **[solution-demo-data](solution-demo-data/)** | .NET 10 SDK |
 | Write code, starting from a plain design | **[solution-clean](solution-clean/)** | .NET 10 SDK |
 | Watch an AI agent build the whole thing from nothing | **[skills-only](skills-only/)** | .NET 10 SDK, internet |
 
@@ -34,7 +34,9 @@ you. This section is here if you want to know why.
 **App packages** are a finished Dynamicweb site, already built. You host the
 folder in IIS and it runs — there is nothing to compile. You can change the
 site through the Dynamicweb administration and its templates, but there is no
-code project in the box, so you cannot write or build add-ins.
+code project in the box, so there is nowhere to write code. You can still use
+add-ins — installed from the AppStore, or built in a separate project — you
+just can't develop them here.
 
 That is not only a limitation: an app package gives you a real, running
 Dynamicweb instance with the MCP server installed. If the thing you're building
@@ -43,7 +45,7 @@ pull data from.
 
 **Solution packages** are the same site as a development project. You open it
 in Visual Studio or Rider, or run it from the command line, and you can change
-the code. This is the only kind of package where add-ins are possible.
+the code. This is the one to take if you want somewhere to write code.
 
 **Skills-only** is neither. It contains three agent skills and nothing else —
 34 KB. The agent creates the solution and downloads every asset itself while
