@@ -15,6 +15,15 @@ instead.
 This is also the only package without the Dynamicweb MCP server preinstalled —
 there's nothing to install it into until the agent has scaffolded the solution.
 
+> [!IMPORTANT]
+> **Create the folder on the C: drive** — for example
+> `C:\Projects\PartnerDaysExtended`.
+>
+> Do **not** put it inside OneDrive, Dropbox or any other synced folder. Sync
+> locks files while the build and Dynamicweb are using them, and the failures
+> that follow look like something else entirely — you'll waste an hour chasing
+> the wrong problem. Keep the path short while you're at it.
+
 ## What's in the package
 
 | Skill | What it does |
@@ -41,9 +50,9 @@ Each skill ships twice — under `.claude/skills/` for Claude Code and
 
 ## 2. Create an empty folder and unpack into it
 
-This is the folder the finished solution will live in, so pick the name and
-location you actually want. Somewhere short, and **not** inside OneDrive,
-Dropbox or any synced folder.
+This is the folder the finished solution will live in, so pick the name you
+actually want — under `C:\Projects\`, for example. **Not** OneDrive, Dropbox or
+any synced folder — see the warning at the top of this page.
 
 After unpacking you should see `.claude/`, `.agents/` and `readme.md` — and
 nothing else. If you see a `PartnerDaysExtended.Host` folder, you unpacked the

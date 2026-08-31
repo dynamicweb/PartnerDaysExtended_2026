@@ -12,6 +12,15 @@ start from a blank canvas, use the [clean](../app-clean/) package; the database
 is identical in both and only the assets differ. If you want to write code,
 take a [solution package](../solution-demo-data/).
 
+> [!IMPORTANT]
+> **Extract to a local path on the C: drive** — for example
+> `C:\Projects\PartnerDaysExtended`.
+>
+> Do **not** extract inside OneDrive, Dropbox or any other synced folder. Sync
+> locks files while the build and Dynamicweb are using them, and the failures
+> that follow look like something else entirely — you'll waste an hour chasing
+> the wrong problem. Keep the path short while you're at it.
+
 ## What's in the package
 
 | | |
@@ -45,9 +54,9 @@ server is already installed.
 
 ## 2. Unpack
 
-Somewhere short, and **not** inside OneDrive, Dropbox or any synced folder.
-`C:\inetpub\PartnerDaysExtended` or `C:\Projects\PartnerDaysExtended` both
-work.
+Extract to `C:\Projects\PartnerDaysExtended` or `C:\inetpub\PartnerDaysExtended`.
+**Not** OneDrive, Dropbox or any synced folder — see the warning at the top of
+this page.
 
 The 522 MB download unpacks to about 0.9 GB across 3,099 files, so give it a
 moment.

@@ -11,6 +11,15 @@ missing. If you'd rather have a finished-looking shop, use the
 [with demo data](../app-demo-data/) package instead. If you want to write code,
 take a [solution package](../solution-clean/).
 
+> [!IMPORTANT]
+> **Extract to a local path on the C: drive** — for example
+> `C:\Projects\PartnerDaysExtended`.
+>
+> Do **not** extract inside OneDrive, Dropbox or any other synced folder. Sync
+> locks files while the build and Dynamicweb are using them, and the failures
+> that follow look like something else entirely — you'll waste an hour chasing
+> the wrong problem. Keep the path short while you're at it.
+
 ## What's in the package
 
 | | |
@@ -42,9 +51,9 @@ The latest Dynamicweb MCP server is already installed.
 
 ## 2. Unpack
 
-Somewhere short, and **not** inside OneDrive, Dropbox or any synced folder.
-`C:\inetpub\PartnerDaysExtended` or `C:\Projects\PartnerDaysExtended` both
-work.
+Extract to `C:\Projects\PartnerDaysExtended` or `C:\inetpub\PartnerDaysExtended`.
+**Not** OneDrive, Dropbox or any synced folder — see the warning at the top of
+this page.
 
 Note where the folder root is — the level containing `web.config`. IIS needs
 exactly that path in step 4, and pointing it at `wwwroot` or `bin` instead is a
