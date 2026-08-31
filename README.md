@@ -28,9 +28,9 @@ Server, imports the database and wires up the connection for you.
 
 ## Which one should I pick?
 
-- **You want to write code** → *solution*. You get an `.slnx` to open in Visual
-  Studio or Rider and a host project referencing `Dynamicweb.Suite`. Needs the
-  .NET 10 SDK.
+- **You want to write code** → *solution*. An ordinary .NET solution: open the
+  `.slnx` in Visual Studio or Rider, or run it from the CLI with `dotnet run`.
+  The only packages where you can build add-ins. Needs the .NET 10 SDK.
 - **You just want a running site to click around in** → *app*. Already
   published and hosted in IIS. Note there is no code project in it, so you
   cannot build or develop add-ins from this package — take a *solution* if you

@@ -10,6 +10,16 @@ The database is the demo catalogue either way, so expect product images to be
 missing. If you'd rather have a finished-looking shop, use the
 [with demo data](../solution-demo-data/) package instead.
 
+**Use this package when you want a coding solution.** It's an ordinary .NET
+solution: open `PartnerDaysExtended.slnx` in Visual Studio or Rider and start
+it from there, or run it from the command line with `dotnet run`. Unlike the
+[app packages](../app-clean/) there's a real project here, so this is what you
+take if you want to write code or build add-ins.
+
+Note that `.slnx` is the newer XML solution format — a current Visual Studio
+opens it, older versions don't. Working from the CLI avoids the question
+entirely.
+
 > [!IMPORTANT]
 > **Extract to a local path on the C: drive** — for example
 > `C:\Projects\PartnerDaysExtended`.
