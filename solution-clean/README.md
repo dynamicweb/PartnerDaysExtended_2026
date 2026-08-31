@@ -138,9 +138,11 @@ to drop and replace, or give it a different database name.
 `/TargetTrustServerCertificate:True`. If you're running the import by hand, add
 it.
 
-**Product images are missing.** Expected — this is the clean package. The
-database holds the demo catalogue but the images aren't shipped. Add your own,
-or switch to the [with demo data](../solution-demo-data/) package.
+**Products have no images.** Expected — this is the clean package. The
+database holds the full demo catalogue, so product names and prices appear
+normally, but no image files ship with it: the tiles simply render without
+pictures rather than showing broken ones. Add your own, or switch to the
+[with demo data](../solution-demo-data/) package.
 
 **The site starts but can't connect to the database.** Open
 `PartnerDaysExtended.Files/Files/GlobalSettings.Database.config` and check the

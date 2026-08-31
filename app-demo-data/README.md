@@ -138,8 +138,13 @@ Nothing is preconfigured for this, but the application runs on its own:
 dotnet bin/Dynamicweb.Host.Suite.dll
 ```
 
-It prints the URL it's listening on. This needs the .NET 10 runtime rather
-than the Hosting Bundle, and skips IIS entirely.
+It starts on <http://localhost:5000> and prints the URL it's listening on.
+This needs the .NET 10 runtime rather than the Hosting Bundle, and skips IIS
+entirely.
+
+Note the assembly is `Dynamicweb.Host.Suite.dll`. There is also a
+`Dynamicweb.Suite.dll` in `bin/`, but it's a library with no runtime
+configuration — `dotnet` can't start it.
 
 Browse to the site. You should see the Swift demo shop with product images,
 typography and colours in place. The Dynamicweb administration is at `/Admin`.

@@ -131,8 +131,13 @@ Nothing is preconfigured for this, but the application runs on its own:
 dotnet bin/Dynamicweb.Host.Suite.dll
 ```
 
-It prints the URL it's listening on. This needs the .NET 10 runtime rather
-than the Hosting Bundle, and skips IIS entirely.
+It starts on <http://localhost:5000> and prints the URL it's listening on.
+This needs the .NET 10 runtime rather than the Hosting Bundle, and skips IIS
+entirely.
+
+Note the assembly is `Dynamicweb.Host.Suite.dll`. There is also a
+`Dynamicweb.Suite.dll` in `bin/`, but it's a library with no runtime
+configuration — `dotnet` can't start it.
 
 Browse to the site. The Dynamicweb administration is at `/Admin`.
 
@@ -179,6 +184,8 @@ not `wwwroot`.
 **The import says the database already exists.** Run the skill again and choose
 to drop and replace, or give it a different database name.
 
-**Product images are missing.** Expected — this is the clean package. The
-database holds the demo catalogue but the images aren't shipped. Add your own,
-or switch to the [with demo data](../app-demo-data/) package.
+**Products have no images.** Expected — this is the clean package. The
+database holds the full demo catalogue, so product names and prices appear
+normally, but no image files ship with it: the tiles simply render without
+pictures rather than showing broken ones. Add your own, or switch to the
+[with demo data](../app-demo-data/) package.
